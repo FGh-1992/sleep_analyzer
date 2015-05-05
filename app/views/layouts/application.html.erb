@@ -52,11 +52,11 @@
 			</div>
 		</form>
 		<ul class="nav menu">
-			<li class="active"><a href="../.."><span class="glyphicon glyphicon-dashboard"></span> صفحه اصلی</a></li>
-			<li><a href="../../sleeps"><span class="glyphicon glyphicon-th"></span> خواب ها</a></li>
-			<li><a href="../../profiles"><span class="glyphicon glyphicon-stats"></span> پروفایل</a></li>
-			<li role="presentation" class="divider"></li>
-		c</ul>
+			<li class=<%= if current_page? authenticated_root_path then "active" else "" end %>><a href="../.."> صفحه اصلی</a></li>
+			<li class=<%= if current_page? "/sleeps" then "active" else "" end %>> <a href="../../sleeps"> خواب ها</a></li>
+			<li class=<%= if current_page? profile_path(:id => current_user.profile.id) then "active" else "" end %>><%= link_to 'پروفایل' , profile_path(:id => current_user.profile.id) %></li>
+				<li role="presentation" class="divider"></li>
+		</ul>
 		
 	</div><!--/.sidebar-->
 	<div class=" col-sm-9  col-lg-10 main">
