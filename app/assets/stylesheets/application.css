@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.calendar {
+	direction: rtl;
+}
+
+#flat_calendar_1, #flat_calendar_2{
+	width: 200px;
+}
+
+.example {
+	padding: 10px;
+}
+
+.display_area {
+	background-color: #FFFF88
+}
+
+.login-panel{
+	margin-top: 120px;
+}
+
+.panel{
+	margin-top: 20px;
+}
+
+.slide{
+	margin-top: 50px;
+}
+.motions_chart{
+	margin-top: 50px;
+	margin-left: 15px;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+.btn-danger{
+	background-color: rgba(23, 242, 9, 1);
+	border-color: rgba(33, 195, 23, 1);
+	color: rgba(66, 63, 63, 1);
+}
+
+.btn-default{
+	background-color: rgba(27, 167, 255, 1);
+	border-color: rgba(104, 134, 192, 1);
+	text-shadow: none;
+	color: rgba(66, 63, 63, 1);
+}
+
+a , a:hover, a:focus {
+    color: #30A5FF;
+}
+
+div.panel-body div.col-md-6 {
+	float: right;
+}
+
+body{
+	background-color: rgba(215, 234, 234, 1);
+}
+
+.sh-p-div{
+	background-color: #FFF;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+

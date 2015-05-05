@@ -1,0 +1,35 @@
+<div class="sh-p-div">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>نام:</strong>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <strong>نام خانوادگی:</strong>
+  <%= @profile.lastname %>
+</p>
+
+<p>
+  <strong>تاریخ تولد:</strong>
+  <%= @profile.birthdate %>
+</p>
+
+<p>
+  <strong>تلفن:</strong>
+  <%= @profile.telephone %>
+</p>
+
+<p>
+  <strong>جنسیت:</strong>
+  <%= @profile.gender %>
+</p>
+
+
+<%= link_to t('.edit', :default => t("helpers.links.Edit")),edit_profile_path(@profile), :class => 'btn btn-primary' %>
+<%= link_to t('.back', :default => t("helpers.links.Back")), profiles_path ,:class => 'btn btn-primary'%>
+
+
+</div>

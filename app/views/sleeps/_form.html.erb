@@ -1,0 +1,45 @@
+<%= form_for @sleep, :html => { :class => "form-horizontal sleep" } do |f| %>
+
+    <% if @sleep.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@sleep.errors.count, "error") %> prohibited this sleep from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @sleep.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :user_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :user_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@sleep[:user_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :start_time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :start_time, :class => 'form-control' %>
+    </div>
+    <%= error_span(@sleep[:start_time]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :end_time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :end_time, :class => 'form-control' %>
+    </div>
+    <%= error_span(@sleep[:end_time]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            sleeps_path, :class => 'btn btn-default' %>
+
+<% end %>

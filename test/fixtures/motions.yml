@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sleep_id: 1
+  motion_time: 2015-04-08 23:26:21
+
+two:
+  sleep_id: 1
+  motion_time: 2015-04-08 23:26:21

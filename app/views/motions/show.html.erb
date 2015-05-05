@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sleep:</strong>
+  <%= @motion.sleep_id %>
+</p>
+
+<p>
+  <strong>Motion time:</strong>
+  <%= @motion.motion_time %>
+</p>
+
+<%= link_to 'Edit', edit_motion_path(@motion) %> |
+<%= link_to 'Back', motions_path %>

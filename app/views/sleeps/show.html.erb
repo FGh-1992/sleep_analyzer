@@ -1,0 +1,49 @@
+
+<dl class="dl-horizontal">
+
+</dl>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Sleep</th>
+      <th>Motion time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @motions.each do |motion| %>
+      <tr>
+        <td><%= motion.sleep_id %></td>
+        <td><%= motion.motion_time %></td>
+    <% end %>
+  </tbody>
+</table>
+
+<% if !@motions.blank? %>
+<script type = "text/javascript" charset="utf-8">
+$(function () {
+  new Highcharts.Chart({
+    chart: { renderTo: 'motions_chart' },
+    title: { text: 'Orders by Day' },
+    xAxis: { type: 'datetime' 
+
+
+  },
+    yAxis: {
+      title: { text: 'Dollars' }
+    },
+    series: [{
+      pointInterval: <%= 10.minute * 1000 %>,
+      pointStart: <%= @motions.first.created_at.to_i * 1000 %>,
+         data: <%= (@motions.first.created_at.to_i..(@motions.last.created_at+10.minutes).to_i).step(10.minutes).map { |time| Motion.total_on(Time.at(time).utc, @sleep.id).to_f}.inspect %>
+       // data: [1, 2, 5, 7, 3]
+    }]
+  });
+});
+</script>
+<h3> نمودار </h3>
+<div id="motions_chart" style="width=500px; height=300px; direction:ltr;">inja</div>
+
+<% end %>
