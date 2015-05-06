@@ -1,6 +1,8 @@
  Rails.application.routes.draw do
   resources :motions
-  get 'sleeps/user_id' => 'sleeps#index' , as: 'user_sleeps'
+  get 'sleeps/date' => 'sleeps#sleeps_of_day' , as: 'date_sleeps'
+  # get 'sleeps/user_id' => 'sleeps#sleepsOfday' , as: 'user_day_sleeps'
+
   resources :sleeps
 
   resources :profiles

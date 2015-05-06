@@ -14,9 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
-//= require calendar
-//= require calendar-fa
-//= require calendar-setup
 //= require_tree .
 
 

@@ -14,14 +14,6 @@
  *= require_self
  */
 
-.calendar {
-	direction: rtl;
-}
-
-#flat_calendar_1, #flat_calendar_2{
-	width: 200px;
-}
-
 .example {
 	padding: 10px;
 }

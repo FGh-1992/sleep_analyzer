@@ -8,13 +8,17 @@
 <script src="assets/javascripts/exporting.js"></script> 
   <link rel="stylesheet" type="text/css" href="assets/mystyle.css">
   <%= javascript_include_tag "jquery-1.11.1.min","rails", "highcharts" %>
-
+    <link rel="stylesheet" href="assets/javascripts/font-awesome.css" /> 
+	<link rel="stylesheet" href="assets/javascripts/demo.css" /> 
+	<link rel="stylesheet" href="assets/javascripts/jalendar.css" /> 
  <%= csrf_meta_tags %>
 </head>
 <body>
 
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
+	    <link rel="stylesheet" href="./css/font-awesome.css" /> 
+	<link rel="stylesheet" href="./css/demo.css" /> 
+	<link rel="stylesheet" href="./css/jalendar.css" /> 	<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
 					<span class="sr-only">Toggle navigation</span>
@@ -56,6 +60,7 @@
 			<li class=<%= if current_page? "/sleeps" then "active" else "" end %>> <a href="../../sleeps"> خواب ها</a></li>
 			<li class=<%= if current_page? profile_path(:id => current_user.profile.id) then "active" else "" end %>><%= link_to 'پروفایل' , profile_path(:id => current_user.profile.id) %></li>
 				<li role="presentation" class="divider"></li>
+
 		</ul>
 		
 	</div><!--/.sidebar-->
@@ -71,6 +76,8 @@
 	<div class=" col-sm-12  col-lg-12 main">
 <%end%>	
 
+<%= link_to 'aaa' , date_sleeps_path(:date_param => Date.today.to_date) %>
+<%= Date.today.to_date%>
 			<%= yield %>		
 	</div>
 </body>

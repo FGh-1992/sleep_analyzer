@@ -1,0 +1,33 @@
+/*
+	Jalendar Lite 1.0 demo
+	by Seyyed Reza Hosseyni Nezhad
+	contact hosseyni.nezhad@yahoo.com
+*/
+
+@font-face {
+	font-family:'Web_Yekan';
+	src:url('fonts/Yekan.eot');
+	src:local('?'),url('fonts/Yekan.woff') format('woff'),url('fonts/Yekan.ttf') format('truetype'),url('fonts/Yekan.svg') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+body{
+	font-family: 'B Yekan','Web_Yekan';
+	font-size:17px;
+	direction:rtl;
+	padding-top:20px;
+}
+
+.portlet{
+	width:50%;
+	margin:auto;
+	min-width:252px;
+}
+
+.portletTitle{
+	background-color:#4B8DF8;
+	padding:5px;
+	color:white;
+	font-size:larger;
+}

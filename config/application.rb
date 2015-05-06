@@ -10,6 +10,7 @@ module SleepAnalyzer
     config.assets.precompile += %w( jquery-1.11.1.min.js )
     config.assets.precompile += %w( rails.js )
     config.assets.precompile += %w( highcharts.js )
+    config.assets.precompile += %w( jalendar.js )
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -21,7 +22,7 @@ module SleepAnalyzer
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :fa
+      config.i18n.default_locale = :fa
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true

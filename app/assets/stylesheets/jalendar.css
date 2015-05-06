@@ -1,0 +1,74 @@
+/*
+	Jalendar Lite 1.0
+	by Seyyed Reza Hosseyni Nezhad
+	contact hosseyni.nezhad@yahoo.com
+*/
+
+#jalendar{
+    direction:rtl;
+	border:1px solid #4B8DF8;
+	min-width:250px;
+}
+
+#jalendar *{
+    padding:0px;
+    margin:0px;
+}
+
+#jalendar #head{
+    width:98%;
+    overflow:auto;
+	line-height:30px;
+	margin:3% auto;
+}
+
+#jalendar #head #title{
+	float:right;
+	padding-right:1px;
+}
+
+#jalendar #head .button{
+	background-color:#EEEEEE;
+	float:left;
+    text-decoration:none;
+	color:black;
+	margin-left:1px;
+	text-align:center;
+	width:14%;
+}
+
+#jalendar #head .button:hover{
+    background-color:#4B8DF8;
+	color:white;
+}
+
+#jalendar #body{
+    width:98%;
+	margin:1% auto;
+	text-align:right;
+	background-color:#DDDDDD;
+}
+
+#jalendar #body th{
+    width:14%;
+	background-color:#EEEEEE;
+	text-align:center;
+	line-height:30px;
+	font-weight:normal;
+}
+
+
+#jalendar #body td{
+	background-color:#FAFAFA;
+	vertical-align:middle;
+	text-align:center;
+	padding-right:5px;
+	padding-left:5px;
+	border:1px solid transparent;
+}
+
+#jalendar #body .info{
+	float:left;
+	margin-left:1px;
+	margin-top:1px;                                                
+}

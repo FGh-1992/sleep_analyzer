@@ -4,12 +4,22 @@ class SleepsController < ApplicationController
   # GET /sleeps
   # GET /sleeps.json
     def index
+        @sleeps = current_user.sleeps
+        # @sleeps = Sleep.where(:user_id => current_user.id,:created_at => date_param)
+        # @sleeps = Sleep.where(["created_at = ? AND user_id = ?",  date_param,current_user.id])
+       # CourseOrder.where("ordered_at > ? AND ordered_at < ?", time - 1.day, time)
+  # byebug
+    end
 
-      @sleeps = current_user.sleeps
-end
+    def sleeps_of_day
+      date_param = params[:date_param]
+      @sleeps_of_day = Sleep.where(["date(created_at) = ? AND user_id = ?", date_param,current_user.id])
+    
+    end
 
 
- 
+
+
   # GET /sleeps/1
   # GET /sleeps/1.json
   def show
@@ -77,4 +87,6 @@ end
     def sleep_params
       params.require(:sleep).permit(:user_id, :start_time, :end_time)
     end
+
+
 end
